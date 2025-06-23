@@ -10,17 +10,13 @@ This document explains the core logic behind Transformer-based models such as GP
 
 Tokens are the basic units of text that a machine learning model (especially language models like GPT) uses to process language.<br/>
 They are not necessarily words — they can be:
+ - Entire words (weather)
+ - Parts of words (un, believ, able)
+ - Punctuation marks (., !, ,)
+ - Whitespace or special symbols
 
-Entire words (apple)
-
-Parts of words (un, believ, able)
-
-Punctuation marks (., !, ,)
-
-Whitespace or special symbols
-🛠️ Why Use Tokens Instead of Words?
-Computers can’t understand text directly. Language models need numbers, so the text is broken into tokens and mapped to numerical IDs using a tokenizer.
-
+### Why Use Tokens Instead of Words?
+Computers can’t understand text directly. Language models need numbers, so the text is broken into tokens and mapped to numerical IDs using a tokenizer.<br/>
 This gives the model a consistent and manageable way to process inputs of varying complexity.
 
 Example: "I love Transformers!"

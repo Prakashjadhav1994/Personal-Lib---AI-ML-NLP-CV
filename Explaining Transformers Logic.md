@@ -71,7 +71,7 @@ Each token is transformed into a vector representation (embedding). The self-att
 
 Even though all tokens are considered simultaneously, tokens with higher attention scores have a stronger influence on the decision of the next token.
 
-### Voting Analogy
+### 2.1. Voting Analogy
 
 It is like a voting system, where each token acts as a "voter" in a poll to decide which repose-token will be the next in the sequence. 
 Each voter (token) casts their vote, but the votes do not have the same weight: some tokens have a higher "weight" (higher attention score) and, therefore, their opinion weighs more in the final decision.

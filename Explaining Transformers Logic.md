@@ -8,7 +8,7 @@ This document explains the core logic behind Transformer-based models such as GP
 
 ## 1. What are Tokens?
 
-Tokens are the basic units of text that a machine learning model — especially language models like GPT — uses to process language.
+Tokens are the basic units of text that a machine learning model (especially language models like GPT) uses to process language.
 
 They are not necessarily words — they can be:
 

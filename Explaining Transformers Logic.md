@@ -19,7 +19,7 @@ They are not necessarily words — they can be:
 Computers can’t understand text directly. Language models need numbers, so the text is broken into tokens and mapped to numerical IDs using a tokenizer.<br/>
 This gives the model a consistent and manageable way to process inputs of varying complexity.
 
-Example: "I love Transformers!"
+#### Example: "I love Transformers!"
 Using GPT-2's tokenizer (which uses Byte Pair Encoding, or BPE):
 
 text

@@ -1,4 +1,4 @@
-# Explaining Transformers Logic
+# Explaining Transformer Logic
 
 ## Overview
 
@@ -30,8 +30,10 @@ Each Token has its own ID depending on the tokenizer. Behind the scenes, tokens 
 Notice: The space is encoded as Ġ before a word
 
 ```python
-tokenizer("Hello") ➜ [15496]
-tokenizer.decode([15496]) ➜ "Hello"
+tokenizer.convert_tokens_to_ids(["Hello", "world"])
+# → [15496, 995]
+tokenizer.decode([15496, 995])
+# → 'Hello world'
 ```
 
 ## 2. Tokenizers and Tokenization
@@ -47,7 +49,7 @@ The tokenizer must match exactly what the model learned.<br/>
 | Subword-level            | Tokens are parts of words         | GPT, BERT, etc.              |
 | Byte-Pair Encoding (BPE) | Most common method in modern LLMs | GPT-2, GPT-3, DeepSeek, etc. |
 
-Add special tokens like <EOS> (end of sentence), <PAD> (padding), and <CLS> (classification), depending on the model's needs.
+It also adds special tokens like <EOS> (End of Sequence), <PAD> (Padding), and <CLS> (Classification), depending on the model's needs.
 
 
 When you load a model from transformers, it often looks like this:
@@ -61,7 +63,7 @@ You're not just loading the model weights — you're also loading the exact toke
 
 ---
 
-## 2. Embedding and Attention
+## 3. Embedding and Attention
 
 Each token is transformed into a vector representation (embedding). The self-attention mechanism calculates dynamic weights for each token, determining how much attention each token should pay to every other token in the sequence.
 
@@ -71,7 +73,7 @@ Each token is transformed into a vector representation (embedding). The self-att
 
 Even though all tokens are considered simultaneously, tokens with higher attention scores have a stronger influence on the decision of the next token.
 
-### 2.1. Voting Analogy
+### 3.1. Voting Analogy
 
 Attention scores work similarly to a voting system, where each token acts as a "voter" in a poll to decide which response-token will be the next in the sequence.<br/> 
 Each voter (token) casts their vote, but the votes do not have the same weight: some tokens have a higher "weight" (higher attention score) and, therefore, their opinion weighs more in the final decision.<br/>
@@ -79,7 +81,7 @@ This "weighted voting" happens in each layer of the Transformer and is dynamical
 
 ---
 
-## 3. Processing by Transformer Layers
+## 4. Processing by Transformer Layers
 
 Using the attention-weighted embeddings, the data is passed through multiple Transformer layers. Each layer performs mathematical operations to refine the model's understanding of the context.
 
@@ -92,7 +94,7 @@ Using the attention-weighted embeddings, the data is passed through multiple Tra
   
 ---
 
-## 4. Next Token Generation
+## 5. Next Token Generation
 
 Once the context is established, the model generates a probability distribution over possible next tokens.
 
@@ -107,12 +109,12 @@ If `do_sample=False`, the model uses Greedy Decoding, always selecting the most 
 
 ---
 
-## 5. Finishing The Iterative Token Generation (End Of Sequence Token ID)
+## 6. Finishing The Iterative Token Generation (End Of Sequence Token ID)
 
 Unless a stop token or a token limit is reached, the model repeats the generation process one token at a time, using its own output as the new input context indefinitely.<br/>
 A token limit may be established with the following parameter `max_new_tokens = n`, where `n` is your limiter. Usually models will keep generating ramble or produce incomplete or nonsensical content, burning through your tokens until this limmit is reached.<br/>
 So we implement a special token that tells the model to stop, this token is called `eos_token_id` or End Of Sequence Token ID, that allows the model to terminate generation early, saving resources and makes output more natural and bounded, especially useful for chat, Q&A, or summarization.<br/>
-When passed to as inside your `outputs=model.generate()`, the model continually checks each newly generated token and stops generation when the `eos_token_id` is generated
+When passed as a parameter inside your `model.generate()`, the model continually checks each newly generated token and stops generation when the `eos_token_id` is generated
 
 
 Every tokenizer has a special token for the end of a sentence or document. This token is assigned an internal ID.
@@ -122,13 +124,13 @@ For example:
 
 ---
 
-## 6. Decoding
+## 7. Decoding
 
-The generated tokens are converted back into human-readable text using the tokenizer, the same way it was initialy converter from text-to-token but backwards!
+The generated tokens are converted back into human-readable text using the tokenizer, the same way it was initially converted from text to tokens — just in reverse!
 
 ---
 
-## 7. Applicability
+## 8. Applicability
 
 This architecture powers most modern NLP models, including:
 
@@ -152,7 +154,7 @@ While other architectures exist (e.g., RNNs, CNNs, Mixture-of-Experts), Transfor
                                 -> [Decode to Text]
 ```
 
-## 8. Example
+## 9. Example
 ```python
 def create_text(prompt, max_new_tokens=50, temperature=0.2):
   ...

@@ -73,8 +73,8 @@ Even though all tokens are considered simultaneously, tokens with higher attenti
 
 ### 2.1. Voting Analogy
 
-It is like a voting system, where each token acts as a "voter" in a poll to decide which repose-token will be the next in the sequence. 
-Each voter (token) casts their vote, but the votes do not have the same weight: some tokens have a higher "weight" (higher attention score) and, therefore, their opinion weighs more in the final decision.
+Attention scores work similarly to a voting system, where each token acts as a "voter" in a poll to decide which response-token will be the next in the sequence.<br/> 
+Each voter (token) casts their vote, but the votes do not have the same weight: some tokens have a higher "weight" (higher attention score) and, therefore, their opinion weighs more in the final decision.<br/>
 This "weighted voting" happens in each layer of the Transformer and is dynamically recalculated as the sequence is processed.
 
 ---
@@ -87,7 +87,7 @@ Using the attention-weighted embeddings, the data is passed through multiple Tra
 
 * Each layer includes multiple attention heads.
 * Each head performs an independent attention calculation.
-* Heads focus on different aspects of the input, enabling the model to capture complex relationships.
+* Heads focus on different input aspects, enabling the model to capture complex relationships.
 * The combined outputs from all heads are merged and passed to the next layer.
   
 ---
@@ -109,43 +109,30 @@ If `do_sample=False`, the model uses Greedy Decoding, always selecting the most 
 
 ## 5. Finishing The Iterative Token Generation (End Of Sequence Token ID)
 
-Unless a stop token or a token limit, the model repeats the generation process one token at a time, using its own output as the new input context indefinitly.
-A token limit may be stablished with the following parameter `max_new_tokens = n`, where `n` is your limiter. Usually models will keep generating ramble or produce incomplete or nonsensical content, burning through your tokens until this limmit is reached.
-So we implement a special token that tells the model to stop, this token is called `eos_token_id` or End Of Sequence Token ID, that allows the model to terminate generation early, saving resources and makes output more natural and bounded, especially useful for chat, Q&A, or summarization.
+Unless a stop token or a token limit is reached, the model repeats the generation process one token at a time, using its own output as the new input context indefinitely.<br/>
+A token limit may be established with the following parameter `max_new_tokens = n`, where `n` is your limiter. Usually models will keep generating ramble or produce incomplete or nonsensical content, burning through your tokens until this limmit is reached.<br/>
+So we implement a special token that tells the model to stop, this token is called `eos_token_id` or End Of Sequence Token ID, that allows the model to terminate generation early, saving resources and makes output more natural and bounded, especially useful for chat, Q&A, or summarization.<br/>
+When passed to as inside your `outputs=model.generate()`, the model continually checks each newly generated token and stops generation when the `eos_token_id` is generated
 
 
-Every tokenizer (like GPT2Tokenizer, AutoTokenizer, etc.) has a special token for the end of a sentence or document. This token is assigned an internal ID.
+Every tokenizer has a special token for the end of a sentence or document. This token is assigned an internal ID.
 For example:
-
-GPT-2 uses 50256
-
-DeepSeek uses 32021
-
-This token is added to the vocabulary and known as eos_token_id.
-
-When passed to .generate(), the model:
-
-Continually checks each newly generated token
-Stops generation when the eos_token_id is generated
-
+ - GPT-2 uses 50256
+ - DeepSeek uses 32021
 
 ---
 
 ## 6. Decoding
 
-The generated tokens are converted back into human-readable text using the tokenizer.
+The generated tokens are converted back into human-readable text using the tokenizer, the same way it was initialy converter from text-to-token but backwards!
 
 ---
 
 ## 7. Applicability
 
-This architecture powers most state-of-the-art NLP models, including:
+This architecture powers most modern NLP models, including:
 
-* GPT series
-* BERT
-* T5
-* RoBERTa
-* DeepSeek, Falcon, Mistral, etc.
+* GPT series, BERT, T5, DeepSeek, Falcon, Mistral, etc.
 
 While other architectures exist (e.g., RNNs, CNNs, Mixture-of-Experts), Transformers are the dominant standard for modern AI tasks in NLP.
 
@@ -157,23 +144,23 @@ While other architectures exist (e.g., RNNs, CNNs, Mixture-of-Experts), Transfor
 [Input Text]
     -> [Tokenization]
         -> [Embedding]
-            -> [Multi-head Attention Layers (with voting)]
+            -> [Multi-head Attention Layers ("Voting")]
                 -> [Probability Distribution for Next Token]
                     -> [Sampling with top_k, top_p, temperature, do_sample]
                         -> [Next Token]
-                            -> [Repeat until end]
+                            -> [Repeat until end (eos_token)]
                                 -> [Decode to Text]
 ```
 
 ## 8. Example
 ```python
-def gerar_texto(prompt, max_new_tokens=50, temperature=0.2):
+def create_text(prompt, max_new_tokens=50, temperature=0.2):
   ...
   outputs = model.generate(
       input_ids=inputs["input_ids"],
       attention_mask=(inputs != tokenizer.pad_token_id),
       max_new_tokens=max_new_tokens,
-      temperature=0.7,
+      temperature=0.2,
       top_k=50,
       top_p=0.9,
       do_sample=True,

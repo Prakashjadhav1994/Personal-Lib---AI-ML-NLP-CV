@@ -26,8 +26,8 @@ Each Token has its own ID depending on the tokenizer. Behind the scenes, tokens 
 *GPT-2's tokenizer (which uses Byte Pair Encoding, or BPE):
 
 "I love Transformers!" → ["I", "Ġlove", "ĠTransform", "ers", "!"]<br/>
-Notice: The space is encoded as Ġ before a word<br/>
-"Transformers" was split into Transform and ers — that's subword tokenization
+"Transformers" was split into Transform and ers — that's subword tokenization<br/>
+Notice: The space is encoded as Ġ before a word
 
 ```python
 tokenizer("Hello") ➜ [15496]

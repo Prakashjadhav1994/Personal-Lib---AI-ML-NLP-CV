@@ -37,7 +37,7 @@ tokenizer.decode([15496]) ➜ "Hello"
 ## 2. Tokenizers and Tokenization
 
 Tokenizers are tools that convert text into previously explained tokens — small, machine-readable pieces that a language model can understand and process.<br/>
-Each model is trained with a specific vocabulary — a list of all tokens it understands. The tokenizer must match exactly what the model learned.<br/>
+A Tokenizer is a part of the Model's Identity; each model is trained with a specific vocabulary — a list of all tokens it understands. The tokenizer must match exactly what the model learned.<br/>
 
 | Tokenizer Type           | Description                       | Used In                      |
 | ------------------------ | --------------------------------- | ---------------------------- |
@@ -48,16 +48,14 @@ Each model is trained with a specific vocabulary — a list of all tokens it und
 
 Add special tokens like <EOS> (end of sentence), <PAD> (padding), and <CLS> (classification), depending on the model's needs.
 
-Tokenizer is Part of the Model's Identity
-When you load a model from transformers, it often looks like this:
 
-python
-Copiar
-Editar
+When you load a model from transformers, it often looks like this:
+```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 model = AutoModelForCausalLM.from_pretrained("gpt2")
+```
 You're not just loading the model weights — you're also loading the exact tokenizer used during its training. They’re a matched pair.
 
 ---

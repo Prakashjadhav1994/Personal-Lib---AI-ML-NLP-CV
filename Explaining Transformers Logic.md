@@ -17,38 +17,27 @@ They are not necessarily words — they can be:
 
 ### Why Use Tokens Instead of Words?
 Computers can’t understand text directly. Language models need numbers, so the text is broken into tokens and mapped to numerical IDs using a tokenizer.<br/>
-This gives the model a consistent and manageable way to process inputs of varying complexity.
+This gives the model a consistent and manageable way to process inputs of varying complexity.<br/>
+The model learns patterns and relationships between these token IDs, not the words themselves.<br/>
+Each Token has its own ID depending on the tokenizer. Behind the scenes, tokens are just numbers.<br/>
+
 
 #### Example: "I love Transformers!"
-Using GPT-2's tokenizer (which uses Byte Pair Encoding, or BPE):
+*GPT-2's tokenizer (which uses Byte Pair Encoding, or BPE):
 
-text
-Copiar
-Editar
-"I love Transformers!" → ["I", "Ġlove", "ĠTransform", "ers", "!"]
-Notice:
-
-The space is encoded as Ġ before a word
-
+"I love Transformers!" → ["I", "Ġlove", "ĠTransform", "ers", "!"]<br/>
+Notice: The space is encoded as Ġ before a word<br/>
 "Transformers" was split into Transform and ers — that's subword tokenization
 
- Each Token Has an ID
-Behind the scenes, tokens are just numbers:
-
-python
-Copiar
-Editar
+```python
 tokenizer("Hello") ➜ [15496]
 tokenizer.decode([15496]) ➜ "Hello"
-The model learns patterns and relationships between these token IDs, not the words themselves.
-
-
-
+```
 
 ## 2. Tokenizers and Tokenization
 
-Tokenizers are tools that convert text into previously explained tokens — small, machine-readable pieces that a language model can understand and process.
-Each model is trained with a specific vocabulary — a list of all tokens it understands. The tokenizer must match exactly what the model learned.
+Tokenizers are tools that convert text into previously explained tokens — small, machine-readable pieces that a language model can understand and process.<br/>
+Each model is trained with a specific vocabulary — a list of all tokens it understands. The tokenizer must match exactly what the model learned.<br/>
 
 | Tokenizer Type           | Description                       | Used In                      |
 | ------------------------ | --------------------------------- | ---------------------------- |
@@ -57,7 +46,7 @@ Each model is trained with a specific vocabulary — a list of all tokens it und
 | Subword-level            | Tokens are parts of words         | GPT, BERT, etc.              |
 | Byte-Pair Encoding (BPE) | Most common method in modern LLMs | GPT-2, GPT-3, DeepSeek, etc. |
 
-Add special tokens like <EOS> (end of sentence), <PAD> (padding), <CLS> (classification), depending on the model's needs.
+Add special tokens like <EOS> (end of sentence), <PAD> (padding), and <CLS> (classification), depending on the model's needs.
 
 Tokenizer is Part of the Model's Identity
 When you load a model from transformers, it often looks like this:
@@ -177,7 +166,7 @@ While other architectures exist (e.g., RNNs, CNNs, Mixture-of-Experts), Transfor
                                 -> [Decode to Text]
 ```
 
-## 8, Example
+## 8. Example
 ```python
 def gerar_texto(prompt, max_new_tokens=50, temperature=0.2):
   ...

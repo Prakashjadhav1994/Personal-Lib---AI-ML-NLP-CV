@@ -11,12 +11,6 @@ This personal project aims to document, study, and share practical and theoretic
 
 ---
 
-This library is Public Domain and can be freely shared and used by anyone.
-
-Feedback and contributions are highly welcome!
-
----
-
 ## Contents
 
 - 📚 Core concepts of Transformers: explanations and diagrams
@@ -24,3 +18,11 @@ Feedback and contributions are highly welcome!
 - 🔍 Techniques for text preprocessing and postprocessing
 - 🚀 Best practices for training and fine-tuning models
 - 📖 References for further study
+
+---
+
+This library is Public Domain and can be freely shared and used by anyone.
+
+Feedback and contributions are highly welcome!
+
+---

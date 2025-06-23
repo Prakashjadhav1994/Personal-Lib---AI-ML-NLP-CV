@@ -4,10 +4,10 @@
 
 This personal project aims to document, study, and share practical and theoretical knowledge about AI, with a focus on:
 
-- Transformer models
 - Python development
-- Using the PyTorch library
 - Code examples and best practices
+- Transformer models
+- Using the PyTorch library
 
 
 ## Contents

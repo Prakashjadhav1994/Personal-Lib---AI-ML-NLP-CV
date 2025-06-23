@@ -18,8 +18,8 @@ They are not necessarily words — they can be:
 ### Why Use Tokens Instead of Words?
 Computers can’t understand text directly. Language models need numbers, so the text is broken into tokens and mapped to numerical IDs using a tokenizer.<br/>
 This gives the model a consistent and manageable way to process inputs of varying complexity.<br/>
-The model learns patterns and relationships between these token IDs, not the words themselves.<br/>
-Each Token has its own ID depending on the tokenizer. Behind the scenes, tokens are just numbers.<br/>
+The model doesn’t see words, it sees token IDs (integers) mapped from text, these IDs are later converted into high-dimensional vectors (embeddings) that capture meaning.<br/>
+Each Token has its own ID depending on the tokenizer.<br/>
 
 
 #### Example: "I love Transformers!"
@@ -65,7 +65,8 @@ You're not just loading the model weights — you're also loading the exact toke
 
 ## 3. Embedding and Attention
 
-Each token is transformed into a vector representation (embedding). The self-attention mechanism calculates dynamic weights for each token, determining how much attention each token should pay to every other token in the sequence.
+Each token is transformed into a vector representation (embedding). The self-attention mechanism calculates dynamic weights for each token, determining how much attention each token should pay to every other token in the sequence.<br/>
+The model learns these weights during training, adjusting them dynamically based on context.
 
 * These weights (scores) reflect how much each token influences the others.
 * Tokens with higher scores have more impact on the resulting representation.
@@ -103,9 +104,8 @@ Once the context is established, the model generates a probability distribution 
 1. **top_k**: Restricts the sample to the `k` most likely words (e.g. top_k=50 limits the choice to the 50 most likely words). In other words, even with sampling, it only chooses within these k words.
 2. **top_p (nucleus sampling)**: Instead of limiting by a fixed number `k`, it limits the set of chosen words to the most likely ones that, together, add up to the probability `p` (e.g. 0.9 = 90%). This allows for a dynamic set of words, adapting the number of options depending on the probability distribution.
 3. **temperature**: Controls the model's “degree of freedom” when choosing the next word. Low values ​​(e.g. 0.2) make the choice more conservative and predictable; high values ​​(e.g. 1.0) allow for more varied and “creative” choices.
-4. **do_sample=(True or False)**: Enables stochastic sampling or random sampling, choosing the next word based on the generated probabilities, instead of always choosing the most likely word (Greedy Decoding).
-
-If `do_sample=False`, the model uses Greedy Decoding, always selecting the most probable token.
+4. **do_sample=True**: Enables stochastic sampling or random sampling, choosing the next word based on the generated probabilities, instead of always choosing the most likely word (Greedy Decoding).<br/>
+If `do_sample=False`, the model uses Greedy Decoding, leading to deterministic but often repetitive outputs.
 
 ---
 

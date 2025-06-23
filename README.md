@@ -9,7 +9,6 @@ This personal project aims to document, study, and share practical and theoretic
 - Using the PyTorch library
 - Code examples and best practices
 
----
 
 ## Contents
 
@@ -19,10 +18,15 @@ This personal project aims to document, study, and share practical and theoretic
 - 🚀 Best practices for training and fine-tuning models
 - 📖 References for further study
 
+## Socials
+[![Linkedin](https://img.shields.io/badge/-LinkedIn/leomsantos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/leomsantos/)](https://www.linkedin.com/in/leomsantos/)
+[![Gmail Badge](https://img.shields.io/badge/-leoms--98@hotmail.com-D14836?style=flat-square&logo=Gmail&logoColor=white)](mailto:leoms-98@hotmail.com)
+[![GitHub](https://img.shields.io/github/followers/LeoMSgit?label=follow&style=social)](https://github.com/LeoMSgit)
+
 ---
 
 This library is Public Domain and can be freely shared and used by anyone.
 
 Feedback and contributions are highly welcome!
 
----
+

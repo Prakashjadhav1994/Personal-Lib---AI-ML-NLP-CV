@@ -37,7 +37,8 @@ tokenizer.decode([15496]) ➜ "Hello"
 ## 2. Tokenizers and Tokenization
 
 Tokenizers are tools that convert text into previously explained tokens — small, machine-readable pieces that a language model can understand and process.<br/>
-A Tokenizer is a part of the Model's Identity; each model is trained with a specific vocabulary — a list of all tokens it understands. The tokenizer must match exactly what the model learned.<br/>
+A Tokenizer is a part of the Model's Identity, each model is trained with a specific vocabulary or a list of all tokens it understands.<br/>
+The tokenizer must match exactly what the model learned.<br/>
 
 | Tokenizer Type           | Description                       | Used In                      |
 | ------------------------ | --------------------------------- | ---------------------------- |

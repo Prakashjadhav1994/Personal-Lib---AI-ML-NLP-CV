@@ -13,7 +13,7 @@ This personal project aims to document, study, and share practical and theoretic
 ## Contents
 
 - 📚 Core concepts of Transformers: explanations and diagrams
-  - [Explaning Transformers Logic]()
+  - [Explaning Transformers Logic](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP/blob/main/Explaining%20Transformer%20Logic.md)
 - 🛠️ Python code examples using PyTorch and Transformers
 - 🔍 Techniques for text preprocessing and postprocessing
 - 🚀 Best practices for training and fine-tuning models

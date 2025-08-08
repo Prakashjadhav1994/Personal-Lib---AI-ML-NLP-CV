@@ -14,8 +14,10 @@
   - Quanto mais bits disponíveis para representar uma cor, mais fiel à realiade ela será, pois permite mais nuances entre os tons de cada cor
 <img width="929" height="300" alt="image" src="https://github.com/user-attachments/assets/0a59aa18-50b1-447a-b636-23fdabcb6a30" />
 
-- Outros modelos como o *Grayscale*, têm pixels com apenas 1 canal, que representa os tons de cinza na imagem, sendo normalmente 0 (preto) a 255 (branco) se for 8 bits
-
+- Um modelo derivado do RGB é o *Grayscale*, no qual seus pixels têm apenas 1 canal, que representa os tons de cinza na imagem, sendo normalmente 0 (preto) a 255 (branco) se for 8 bits, isso permite uma variação de intensidade luminosa
+  - Grayscale é amplamente utilizada por sua simplicidade e menor custo computacional, pois representa a imagem com apenas um canal de intensidade, ao invés dos três canais RGB, mantendo informações de luminosidade sem precisar da cor
+ 
+    
 ### 1.3) Formação da Imagem
 - Por fim, a imagem nada mais é que a reconstrução visual de uma matriz tridimensional ou *Tensor*
 - Esse *Tensor* é composto pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo como uma tela ou impresso por uma impressora

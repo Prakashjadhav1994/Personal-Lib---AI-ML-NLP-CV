@@ -13,6 +13,8 @@
 - A profundidade de bits (ou bit depth) define quantas variações de cor podem ser representadas ou a precisão com que cada cor é armazenada por pixel
   - Quanto mais bits disponíveis para representar uma cor, mais fiel à realiade ela será, pois permite mais nuances entre os tons de cada cor
 <img width="929" height="300" alt="image" src="https://github.com/user-attachments/assets/0a59aa18-50b1-447a-b636-23fdabcb6a30" />
+
+
 - Além do sistema RGB, existem outros modelos como CMYK (impressão), HSV (matiz/saturação), ou grayscale/escalas de cinza (1 canal)
 
 - Por fim, a imagem é a reconstrução visual de uma matriz tridimensional, composta pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo (tela, impressora)

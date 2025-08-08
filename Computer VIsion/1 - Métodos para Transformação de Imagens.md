@@ -7,7 +7,7 @@
   - Diferentes sensores (câmeras RGB, térmicas, de profundidade, ultrassom, etc.) permitem que algoritmos obtenham diferentes aspectos da realidade como cor, profundidade, calor, movimento entre outros
  
 
-### 1.2) Pixel("picture element" ou elemento de imagem): A menor unidade visual de uma imagem
+### 1.2) Pixel ("picture element" ou elemento de imagem): A menor unidade visual de uma imagem
 - O registro de uma imagem digital é geralmente realizado por unidades mínimas de cor/brilho Pixels
 - No modelo mais comum, o RGB, cada pixel é uma tupla numéricas composta por 3 *canais*, cada canal representa um valor de Red, Green ou Blue, que compõe aquele pixel
 - A profundidade de bits (ou bit depth) define quantas variações de cor podem ser representadas ou a precisão com que cada cor é armazenada por pixel
@@ -23,6 +23,13 @@
 - Esse *Tensor* é composto pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo como uma tela ou impresso por uma impressora
   - Bibliotecas como OpenCV, PIL ou NumPy permitem acessar, modificar e analisar essa matriz em Python de diversas maneiras
 
-# # 1) Binarização
+## 2) Métodos de Conversão de Imagem
+### 2.1) Binarização
 - Método mais simples de interpreteção de imagem
 - Separa a imagem em dois tipos de regiões, regiões de interesse e regiões de não interesse, através de um ponto limiar escolhido no espectro de cores
+  - "Apaga" partes não interessantes com branco e deixa apenas as partes relevantes em preto
+
+
+### 2.1) ConvexHull
+- Método de delimitação de objetos em uma imagem
+- Cria um "contorno" ao redor das extremidades do objeto relevante para separá-lo do restante

@@ -7,18 +7,19 @@
   - Diferentes sensores (câmeras RGB, térmicas, de profundidade, ultrassom, etc.) permitem que algoritmos obtenham diferentes aspectos da realidade como cor, profundidade, calor, movimento entre outros
  
 
-### 1.2) Pixel, Unidade de Arazenamento de Dados em Imagens
+### 1.2) Pixel("picture element" ou elemento de imagem): A menor unidade visual de uma imagem
 - O registro de uma imagem digital é geralmente realizado por unidades mínimas de cor/brilho Pixels
-- Cada pixel é uma tuplas numéricas composta por 3 "canais", cada canal representa um valor de Red, Green ou Blue, que compõe aquele pixel
+- No modelo mais comum, o RGB, cada pixel é uma tupla numéricas composta por 3 *canais*, cada canal representa um valor de Red, Green ou Blue, que compõe aquele pixel
 - A profundidade de bits (ou bit depth) define quantas variações de cor podem ser representadas ou a precisão com que cada cor é armazenada por pixel
   - Quanto mais bits disponíveis para representar uma cor, mais fiel à realiade ela será, pois permite mais nuances entre os tons de cada cor
 <img width="929" height="300" alt="image" src="https://github.com/user-attachments/assets/0a59aa18-50b1-447a-b636-23fdabcb6a30" />
 
+- Outros modelos como o *Grayscale*, têm pixels com apenas 1 canal, que representa os tons de cinza na imagem, sendo normalmente 0 (preto) a 255 (branco) se for 8 bits
 
-- Além do sistema RGB, existem outros modelos como CMYK (impressão), HSV (matiz/saturação), ou grayscale/escalas de cinza (1 canal)
-
-- Por fim, a imagem é a reconstrução visual de uma matriz tridimensional, composta pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo (tela, impressora)
-  - Bibliotecas como OpenCV, PIL ou NumPy permitem acessar, modificar e analisar essa matriz em Python
+### 1.3) Formação da Imagem
+- Por fim, a imagem nada mais é que a reconstrução visual de uma matriz tridimensional ou *Tensor*
+- Esse *Tensor* é composto pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo como uma tela ou impresso por uma impressora
+  - Bibliotecas como OpenCV, PIL ou NumPy permitem acessar, modificar e analisar essa matriz em Python de diversas maneiras
 
 # # 1) Binarização
 - Método mais simples de interpreteção de imagem

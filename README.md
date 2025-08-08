@@ -1,20 +1,20 @@
 # Personal Lib - AI / ML / NLP
 
-## Collection of Notes, Guides, and Examples for Artificial Intelligence, Machine Learning, and Natural Language Processing
+## Collection of Notes, Guides, and Examples for Artificial Intelligence, Machine Learning, Natural Language Processing, and Computer Vision
 
 This personal project aims to document, study, and share practical and theoretical knowledge about AI, with a focus on:
 
 - Python development
 - Code examples and best practices
 - Transformer models
-- Using the PyTorch library
+- Using the PyTorch and OpenCV libraries
 
 
 ## Contents
 
 - 📚 Core concepts of Transformers: explanations and diagrams
   - [Explaning Transformers Logic](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP/blob/main/Explaining%20Transformer%20Logic.md)
-- 🛠️ Python code examples using PyTorch and Transformers
+- 🛠️ Python code examples using PyTorch, OpenCV, and Transformers
 - 🔍 Techniques for text preprocessing and postprocessing
 - 🚀 Best practices for training and fine-tuning models
 - 📖 References for further study

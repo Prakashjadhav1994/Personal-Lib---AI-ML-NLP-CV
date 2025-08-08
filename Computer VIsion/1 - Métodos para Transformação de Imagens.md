@@ -1,4 +1,5 @@
-*Métodos para Transformação de Imagens*
+# Métodos para Transformação de Imagens
+
 Embora humanos e computadores utilizem mecanismos diferentes, ambos seguem um processo semelhante: recebem sinais brutos e os interpretam. No caso dos humanos, a luz atinge células sensoriais (cones e bastonetes), e o cérebro interpreta os sinais elétricos; já os computadores recebem dados digitais, provenientes de um arquivo de imagem ou captura por sensor, compostos por bits, e os interpretam por meio de algoritmos
 - Enquanto os seres humanos dispõem de um único sistema passivo de captura, computadores podem ter seus dados coletados de forma ativa (sensores infravermelhos, câmeras térmicas, câmera de movimento, etc.) ou passiva (recebido via arquivo com RGB tradicional)
   - Diferentes sensores (câmeras RGB, térmicas, de profundidade, ultrassom, etc.) permitem que algoritmos obtenham diferentes aspectos da realidade como cor, profundidade, calor, movimento entre outros
@@ -7,11 +8,6 @@ Embora humanos e computadores utilizem mecanismos diferentes, ambos seguem um pr
 - A imagem é a reconstrução visual de uma matriz tridimensional, composta pelas coordenadas (x, y) de cada pixel e sua cor associada, quando renderizada em um dispositivo (tela, impressora)
   - Bibliotecas como OpenCV, PIL ou NumPy permitem acessar, modificar e analisar essa matriz em Python
 
-**1) Binarização**
+# # 1) Binarização
 - Método mais simples de interpreteção de imagem
 - Separa a imagem em dois tipos de regiões, regiões de interesse e regiões de não interesse, através de um ponto limiar escolhido no espectro de cores
-
-**Métodos para Transformação de Imagens**
-- Os computadores funcionam de forma similar aos seres humanos na interpretação de imagens: ambos recebem sinais (luz, captada por cones e bastonetes no olho humano; dados digitais, provenientes de um arquivo de imagem ou captura por sensor, no computador) e interpretam esses sinais (o cérebro processa sinais elétricos; o computador utiliza algoritmos).
-- Enquanto os seres humanos dispõem de um único sistema biológico para captura (os olhos, com suas células fotorreceptoras), os computadores podem utilizar diversos métodos e dispositivos (como câmeras digitais, scanners, sensores infravermelhos, etc.), cada um com funções e especificidades distintas.
-- Uma imagem digital é representada por uma matriz bidimensional de pixels. Cada pixel armazena informações de cor, geralmente codificadas no padrão RGB (combinações de intensidades de vermelho, verde e azul). A disposição ordenada desses pixels na matriz forma a imagem visualizada.

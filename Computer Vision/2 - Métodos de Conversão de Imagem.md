@@ -31,6 +31,7 @@ dst(x,y) =
 
 **Aplicações:** OCR, segmentação de objetos, pré-processamento de bordas.
 
+![](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Example_Image-Trace-1-11.avif)
 ---
 
 ## 2) Convex Hull (Casca Convexa)

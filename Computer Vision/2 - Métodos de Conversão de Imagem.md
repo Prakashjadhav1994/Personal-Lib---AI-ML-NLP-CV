@@ -101,7 +101,7 @@ Também conhecido como **alpha shape** ou **shape reconstruction**.
 
 ![Figura 1: Exemplo de vetorização de uma imagem bitmap](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Classification-of-convex-and-concave-hull-Adapted-from-6.png)
 
-<small>*Fonte: [DOI:10.5815/ijitcs.2017.03.01](DOI:10.5815/ijitcs.2017.03.01)*<small>
+<small>*Fonte: [DOI:10.5815/ijitcs.2017.03.01](https://www.mecs-press.org/ijitcs/ijitcs-v9-n3/v9n3-1.html)*<small>
 
 ---
 

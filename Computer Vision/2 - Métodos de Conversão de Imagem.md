@@ -33,7 +33,7 @@ dst(x,y) =
 
 
 ![Figura 1: Exemplo de vetorização de uma imagem bitmap](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Example_Image-Trace-1-11.avif)
-***Fonte: [https://helpx.adobe.com/br/illustrator/using/image-trace.html](https://helpx.adobe.com/br/illustrator/using/image-trace.html)***
+<small> Fonte: [https://helpx.adobe.com/br/illustrator/using/image-trace.html](https://helpx.adobe.com/br/illustrator/using/image-trace.html)<small>
 ---
 
 ## 2) Convex Hull (Casca Convexa)

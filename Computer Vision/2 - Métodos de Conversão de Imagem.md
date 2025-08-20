@@ -42,7 +42,7 @@ dst(x,y) =
 
 ### Métodos Computacionais para Delimitação de Objetos em Imagens através de Envoltórios (Hulls)
 
-### Convex Hull
+### 2.1) Convex Hull
 
 #### Definição
 É o menor polígono convexo que contém completamente todos os pontos de um conjunto.  
@@ -66,7 +66,7 @@ Visualmente, imagine esticar um elástico ao redor de todos os pontos — a form
 
 ---
 
-### Concave Hull
+### 2.2) Concave Hull
 
 #### Definição
 Um polígono que envolve um conjunto de pontos permitindo concavidades, adaptando-se melhor à forma real do objeto.  
@@ -90,7 +90,7 @@ Também conhecido como **alpha shape** ou **shape reconstruction**.
 
 ---
 
-### Comparação entre Convex e Concave Hull
+### 2.3) Comparação entre Convex e Concave Hull
 | Característica | Convex Hull | Concave Hull |
 |----------------|------------|--------------|
 | Forma | Sempre convexo | Pode ter concavidades |
@@ -99,7 +99,7 @@ Também conhecido como **alpha shape** ou **shape reconstruction**.
 | Aplicações | Robótica, gráficos, simplificação de contornos | Imagens médicas, análise geográfica, reconstrução digital |
 
 
-![Figura 1: Exemplo de vetorização de uma imagem bitmap](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Example_Image-Trace-1-11.avif)
+![Figura 1: Exemplo de vetorização de uma imagem bitmap](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Classification-of-convex-and-concave-hull-Adapted-from-6.png)
 
 <small>*Fonte: [DOI:10.5815/ijitcs.2017.03.01](DOI:10.5815/ijitcs.2017.03.01)*<small>
 

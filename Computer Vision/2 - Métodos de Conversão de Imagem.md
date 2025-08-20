@@ -38,19 +38,70 @@ dst(x,y) =
 
 ---
 
-## 2) Convex Hull (Casca Convexa)
+## 2) Concave and Convex Hull
 
-**Conceito:**  
-Menor polígono convexo que envolve completamente um conjunto de pontos (ou objeto em uma imagem).  
-Pense em esticar um elástico ao redor do objeto.  
+# Métodos Computacionais para Delimitação de Objetos em Imagens através de Envoltórios (Hulls)
 
-**Funcionamento:**  
-Algoritmos: *Graham’s Scan*, *Jarvis March*, etc.  
+## Convex Hull (Envoltório Convexo)
 
-**Aplicações:**  
-- Análise de forma (robustez, compactidade).  
-- Simplificação de contornos irregulares.  
-- Robótica: trajetórias em torno de obstáculos.  
+### Definição
+É o menor polígono convexo que contém completamente todos os pontos de um conjunto.  
+Visualmente, imagine esticar um elástico ao redor de todos os pontos — a forma resultante é o **convex hull**.
+
+### Características
+- Sempre convexo (sem reentrâncias)
+- Conecta os pontos mais extremos do conjunto
+- Não se adapta a concavidades do objeto
+
+### Algoritmos Principais
+- **Graham's Scan**: Ordena pontos por ângulo polar e constrói o hull  
+- **Jarvis March (Embrulho para Presente)**: "Envolve" os pontos encontrando sucessivos pontos de apoio  
+- **QuickHull**: Divisão e conquista baseada em pontos extremos
+
+### Aplicações
+- Análise de forma e compactidade de objetos  
+- Simplificação de contornos complexos  
+- Planejamento de caminho em robótica (evitar colisões)  
+- Detecção de colisão em gráficos computacionais  
+
+---
+
+## Concave Hull (Envoltório Côncavo)
+
+### Definição
+Um polígono que envolve um conjunto de pontos permitindo concavidades, adaptando-se melhor à forma real do objeto.  
+Também conhecido como **alpha shape** ou **shape reconstruction**.
+
+### Características
+- Pode ter reentrâncias e concavidades  
+- Ajusta-se mais precisamente à forma do objeto  
+- Sensível a parâmetros de ajuste
+
+### Métodos de Construção
+- **Alpha Shapes**: Controlado pelo parâmetro α que determina a "abertura" permitida  
+- **K-nearest Neighbors Approach**: Baseado na conectividade de pontos vizinhos  
+- **Delaunay Triangulation**: Remove triângulos baseados em critérios de concavidade  
+
+### Aplicações
+- Reconhecimento de padrões complexos em imagens médicas  
+- Segmentação precisa de objetos com formas irregulares  
+- Análise geográfica e mapeamento de contornos naturais  
+- Arqueologia digital e reconstrução de artefatos  
+
+---
+
+## Comparação entre Convex e Concave Hull
+| Característica | Convex Hull | Concave Hull |
+|----------------|------------|--------------|
+| Forma | Sempre convexo | Pode ter concavidades |
+| Precisão | Menos precisa para formas irregulares | Mais precisa, adapta-se à forma real |
+| Algoritmos | Graham's Scan, Jarvis March, QuickHull | Alpha Shapes, KNN, Delaunay Triangulation |
+| Aplicações | Robótica, gráficos, simplificação de contornos | Imagens médicas, análise geográfica, reconstrução digital |
+
+
+![Figura 1: Exemplo de vetorização de uma imagem bitmap](https://github.com/LeoMSgit/Personal-Lib---AI-ML-NLP-CV/blob/main/Computer%20Vision/Image%20Folder/Example_Image-Trace-1-11.avif)
+
+<small>*Fonte: [DOI:10.5815/ijitcs.2017.03.01](DOI:10.5815/ijitcs.2017.03.01)*<small>
 
 ---
 

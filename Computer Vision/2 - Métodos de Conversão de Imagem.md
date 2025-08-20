@@ -40,25 +40,25 @@ dst(x,y) =
 
 ## 2) Concave and Convex Hull
 
-# Métodos Computacionais para Delimitação de Objetos em Imagens através de Envoltórios (Hulls)
+### Métodos Computacionais para Delimitação de Objetos em Imagens através de Envoltórios (Hulls)
 
-## Convex Hull (Envoltório Convexo)
+### Convex Hull
 
-### Definição
+#### Definição
 É o menor polígono convexo que contém completamente todos os pontos de um conjunto.  
 Visualmente, imagine esticar um elástico ao redor de todos os pontos — a forma resultante é o **convex hull**.
 
-### Características
+#### Características
 - Sempre convexo (sem reentrâncias)
 - Conecta os pontos mais extremos do conjunto
 - Não se adapta a concavidades do objeto
 
-### Algoritmos Principais
+#### Algoritmos Principais
 - **Graham's Scan**: Ordena pontos por ângulo polar e constrói o hull  
 - **Jarvis March (Embrulho para Presente)**: "Envolve" os pontos encontrando sucessivos pontos de apoio  
 - **QuickHull**: Divisão e conquista baseada em pontos extremos
 
-### Aplicações
+#### Aplicações
 - Análise de forma e compactidade de objetos  
 - Simplificação de contornos complexos  
 - Planejamento de caminho em robótica (evitar colisões)  
@@ -66,23 +66,23 @@ Visualmente, imagine esticar um elástico ao redor de todos os pontos — a form
 
 ---
 
-## Concave Hull (Envoltório Côncavo)
+### Concave Hull
 
-### Definição
+#### Definição
 Um polígono que envolve um conjunto de pontos permitindo concavidades, adaptando-se melhor à forma real do objeto.  
 Também conhecido como **alpha shape** ou **shape reconstruction**.
 
-### Características
+#### Características
 - Pode ter reentrâncias e concavidades  
 - Ajusta-se mais precisamente à forma do objeto  
 - Sensível a parâmetros de ajuste
 
-### Métodos de Construção
+#### Métodos de Construção
 - **Alpha Shapes**: Controlado pelo parâmetro α que determina a "abertura" permitida  
 - **K-nearest Neighbors Approach**: Baseado na conectividade de pontos vizinhos  
 - **Delaunay Triangulation**: Remove triângulos baseados em critérios de concavidade  
 
-### Aplicações
+#### Aplicações
 - Reconhecimento de padrões complexos em imagens médicas  
 - Segmentação precisa de objetos com formas irregulares  
 - Análise geográfica e mapeamento de contornos naturais  
@@ -90,7 +90,7 @@ Também conhecido como **alpha shape** ou **shape reconstruction**.
 
 ---
 
-## Comparação entre Convex e Concave Hull
+### Comparação entre Convex e Concave Hull
 | Característica | Convex Hull | Concave Hull |
 |----------------|------------|--------------|
 | Forma | Sempre convexo | Pode ter concavidades |

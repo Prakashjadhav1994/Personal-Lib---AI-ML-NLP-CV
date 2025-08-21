@@ -17,6 +17,7 @@ Um valor de limiar (*threshold* - `T`) é escolhido no espectro de intensidade (
 **Fórmula:**  
 
 ```python
+[
 dst(x,y) = 
 \begin{cases}
 1, & \text{se } src(x,y) > T \\

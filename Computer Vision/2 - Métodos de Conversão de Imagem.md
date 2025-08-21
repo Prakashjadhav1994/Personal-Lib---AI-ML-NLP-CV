@@ -16,13 +16,14 @@ Um valor de limiar (*threshold* - `T`) é escolhido no espectro de intensidade (
 
 **Fórmula:**  
 
-\[
+```python
 dst(x,y) = 
 \begin{cases}
 1, & \text{se } src(x,y) > T \\
 0, & \text{caso contrário}
 \end{cases}
 \]
+```
 
 **Tipos Comuns:**
 - **Global:** Um único valor de `T` para toda a imagem. Bom com iluminação uniforme.  

